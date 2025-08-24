@@ -1,0 +1,61 @@
+/*Design Start*/
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+.design {
+    height: 600px;
+    padding: $section-padding 0;
+    background-image: url("../media/images/design-features.jpg");
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+
+    .overlay {
+        @include overlay;
+    }
+
+    .image {
+        position: relative;
+        z-index: 2;
+        flex: 1;
+        text-align: center;
+
+        img {
+            position: relative;
+            bottom: -150px;
+        }
+
+    @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    .design__text {
+        position: relative;
+        z-index: 2;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: $transparent-color;
+        padding: 3.125rem;
+        color: #ffffff;
+        gap: 2.5rem;
+
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+
+        h2 {
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        .paragraph-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+    }
+}
+/*Design End*/

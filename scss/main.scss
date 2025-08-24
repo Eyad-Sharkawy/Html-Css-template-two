@@ -1,0 +1,16 @@
+// scss/main.scss
+
+// Helpers
+@use 'helpers/variables.scss';
+@use 'helpers/mixins.scss';
+@use 'helpers/global.scss';
+
+// Components
+@use "components/header";
+@use "components/landing-page";
+@use "components/services";
+@use "components/design";
+@use "components/portfolio";
+@use "components/video";
+@use "components/about-us";
+@use "components/stats";

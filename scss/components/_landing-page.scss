@@ -1,0 +1,99 @@
+/*Landing Page Start*/
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+.landing-page {
+    position: relative;
+    height: 100dvh;
+    background-color: #1f2021;
+    background-image: url("../media/images/landing.jpg");
+    background-size: cover;
+
+    .overlay {
+        @include overlay;
+    }
+
+    .text {
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        transform: translatey(-50%);
+        left: 0;
+        display: flex;
+        justify-content: flex-end;
+        background-color: $transparent-color;
+        padding: 3.125rem;
+        color: #ffffff;
+
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+
+        .content {
+            flex-basis: 500px;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: normal;
+                line-height: 1.5;
+                margin-bottom: 1.25rem;
+            }
+
+            p {
+                font-size: 0.875rem;
+                line-height: 2;
+            }
+        }
+    }
+
+    .nav-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        border: none;
+        background: none;
+        cursor: pointer;
+
+        @media (max-width: 576px) {
+            display: none;
+        }
+
+        &.left {
+            left: 20px;
+        }
+
+        &.right {
+            right: 20px;
+        }
+
+        i {
+            color: #DDDDDD;
+        }
+    }
+
+    .bullets {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 0.625rem;
+
+        li {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+
+            &:not(.active) {
+                border: 1px solid white;
+            }
+
+            &.active {
+                background-color: $main-color;
+            }
+        }
+    }
+}
+/*Landing Page End*/

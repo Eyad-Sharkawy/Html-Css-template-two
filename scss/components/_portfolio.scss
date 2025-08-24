@@ -1,0 +1,97 @@
+/*Portfolio Start*/
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+.portfolio {
+    padding: $section-padding 0;
+
+    .portfolio__heading {
+        @include title;
+    }
+
+    .shuffle-container {
+        display: flex;
+        justify-content: center;
+
+        li {
+            button {
+                padding: 0.625rem;
+                background: $white;
+                border: none;
+                transition: background-color ease 0.5s;
+                cursor: pointer;
+
+                &.active, &:hover {
+                    background: $main-color;
+                }
+            }
+        }
+    }
+
+    .image-grid {
+        margin-top: 3.75rem;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1440px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .image-grid__item {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                max-width: 100%;
+                transition: transform ease 0.3s;
+            }
+
+            .image-grid__overlay {
+                position: absolute;
+                left: 0;
+                padding: 20px;
+                background-color: white;
+                width: 100%;
+                bottom: -100%;
+                transition: bottom 0.3s ease;
+
+                h4 {
+                    font-weight: normal;
+                    margin-bottom: 0.625rem;
+                }
+
+                p {
+                    color: $main-color;
+                }
+            }
+
+            &:hover {
+                img {
+                    transform: rotate(3deg) scale(1.1);
+                }
+
+                .image-grid__overlay {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    .more-button {
+        background-color: $main-color;
+        color: $white;
+        padding: 0.9375rem 1.25rem;
+        display: block;
+        width: fit-content;
+        margin: 1.875rem auto;
+        text-decoration: none;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+    }
+}
+/*Portfolio End*/

@@ -1,0 +1,126 @@
+/*Header Start*/
+@use "../helpers/variables" as *;
+
+.site-header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        border-bottom: #A2A2A2FF 1px solid;
+        position: relative;
+
+        .site-logo {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding: 1.25rem 0;
+        }
+
+        .site-navigation {
+            display: flex;
+            align-items: stretch;
+            gap: 1.25rem;
+
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i {
+                    padding: 10px;
+                    color: $white;
+                    cursor: pointer;
+                    transition: color ease 0.3s;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+
+            .icon-menu {
+                @media (min-width: 768px) {
+                    display: none;
+                }
+            }
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                align-items: stretch;
+
+                li {
+                    display: flex;
+                    align-items: stretch;
+                    position: relative;
+
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        color: $white;
+                        font-size: 0.875rem;
+                        text-decoration: none;
+                        padding: 1.25rem 1.25rem;
+                        transition: color ease 0.3s;
+
+                        &:hover {
+                            color: $main-color;
+                            border-bottom: $main-color solid 1px;
+                        }
+                    }
+
+                    &:first-child {
+                        a {
+                            color: $main-color;
+                            border-bottom: $main-color solid 1px;
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 576px) {
+                ul {
+                    display: none;
+                    position: absolute;
+                }
+
+                .icon-menu:hover + ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    left: 0;
+                    top: 80px;
+                    background-color: rgb(0 0 0 / 50%);
+                }
+            }
+
+
+            .site-navigation__container {
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+
+
+            }
+
+            .icon-search {
+                i {
+                    border-left: $white 1px solid ;
+
+                    &:hover {
+                        border-left-color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+}
+/*Header End*/
