@@ -39,7 +39,8 @@ template-two/
 │   │   ├── _skills-testimonials.scss
 │   │   ├── _quote.scss
 │   │   ├── _pricing.scss
-│   │   └── _subscribe.scss
+│   │   ├── _subscribe.scss
+│   │   └── _contact-us.scss
 │   ├── helpers/        # Sass utilities
 │   │   ├── _variables.scss
 │   │   ├── _mixins.scss
