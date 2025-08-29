@@ -40,7 +40,8 @@ template-two/
 │   │   ├── _quote.scss
 │   │   ├── _pricing.scss
 │   │   ├── _subscribe.scss
-│   │   └── _contact-us.scss
+│   │   ├── _contact-us.scss
+│   │   └── _footer.scss
 │   ├── helpers/        # Sass utilities
 │   │   ├── _variables.scss
 │   │   ├── _mixins.scss
