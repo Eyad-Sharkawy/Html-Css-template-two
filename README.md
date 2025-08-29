@@ -2,6 +2,9 @@
 
 A modern, responsive HTML template built with Sass (SCSS). This project is currently **work in progress** and showcases a clean, professional design for business websites.
 
+## Website link
+https://html-css-template-two-amber.vercel.app
+
 ## 🚧 Project Status
 
 **⚠️ WORK IN PROGRESS** - This project is actively being developed and is not yet complete. Features and components are being added incrementally.
