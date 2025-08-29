@@ -605,6 +605,7 @@ ul {
 }
 
 /*About us End*/
+/*Stats Start*/
 .stats {
   padding: 6.25rem 0;
   background-image: url("../media/images/stats.png");
@@ -663,6 +664,8 @@ ul {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+/*Stats End*/
+/*Testimonials and Skills Start*/
 .skills-testimonials {
   padding: 6.25rem 0;
 }
@@ -786,6 +789,8 @@ ul {
   text-align: center;
 }
 
+/*Testimonials and Skills End*/
+/*Quote Start*/
 .quote {
   padding: 6.25rem 0;
   background-image: url("../media/images/quote.jpg");
@@ -811,5 +816,7 @@ ul {
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+/*Quote End*/
 
 /*# sourceMappingURL=main.css.map */
