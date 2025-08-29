@@ -33,7 +33,8 @@ template-two/
 │   │   ├── _video.scss
 │   │   ├── _about-us.scss
 │   │   ├── _stats.scss
-|   |   └── _skills-testimonials.scss
+│   │   ├── _skills-testimonials.scss
+│   │   └── _quote.scss
 │   ├── helpers/        # Sass utilities
 │   │   ├── _variables.scss
 │   │   ├── _mixins.scss

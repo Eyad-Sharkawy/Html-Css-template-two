@@ -1,0 +1,26 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+.quote {
+    padding: $section-padding 0;
+    background-image: url("../media/images/quote.jpg");
+    background-size: cover;
+    position: relative;
+
+    .text {
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-align: center;
+
+        p:first-child {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &::before {
+        content: "";
+        @include overlay;
+    }
+}
