@@ -1,0 +1,111 @@
+/*Pricing Start*/
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+.pricing {
+    padding: $section-padding 0;
+
+    .heading {
+        @include title;
+    }
+
+    .pricing__plans {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+        gap: 1.875rem;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 425px) {
+            grid-template-columns: 1fr;
+        }
+
+        .pricing__plan {
+            background-color: #fcfcfc;
+
+            .price {
+                border-top: 1px solid $main-color;
+                border-bottom: 1px solid $main-color;
+                padding: 2.5rem 1.25rem;
+
+                h3 {
+                    font-weight: normal;
+                    margin-bottom: 20px;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    font-size: 60px;
+                    font-weight: bold;
+
+                    &::before {
+                        content: "$";
+                        position: relative;
+                        font-size: 1.5625rem;
+                        top: -40px;
+                        margin-right: 1rem;
+                        font-weight: normal;
+                    }
+
+                    &::after {
+                        content: "/Mo";
+                        font-size: 1.25rem;
+                        position: relative;
+                        right: -15px;
+                    }
+                }
+            }
+
+            ul {
+                border-bottom: 1px solid $main-color;
+                padding: 0 3.5rem;
+
+                li {
+                    padding: 1.25rem 0;
+
+                    &:nth-child(2) {
+                    border-top: 1px solid $main-color;
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        border-bottom: 1px solid $main-color;
+                    }
+                }
+            }
+
+            button {
+                padding: 20px 20px;
+                border: 1px solid $main-color;
+                margin: 30px 0;
+                background-color: white;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .contact {
+        margin-top: 3.125rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+
+        p {
+            text-align: center;
+            font-size: 1.25rem;
+        }
+
+        button {
+            text-align: center;
+            padding: 1rem 1.875rem;
+            color: white;
+            background-color: $main-color;
+            border: transparent;
+        }
+    }
+}
+/*Pricing End*/
