@@ -1,0 +1,148 @@
+@use "../helpers/variables" as *;
+
+.skills-testimonials {
+    padding: $section-padding 0;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3.75rem;
+
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr;
+        }
+
+        .testimonials {
+            .profiles-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1.875rem;
+
+                .profiles {
+                    display: flex;
+                    align-items: center;
+                    gap: 3.125rem;
+
+                    img {
+                        border-radius: 50%;
+                    }
+
+                    .profile-text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.625rem;
+
+                        p:first-child {
+                            line-height: 1.8;
+                        }
+
+                        p.name {
+                            color: #777;
+                            text-align: right;
+                            font-size: 14px;
+                        }
+
+                        hr {
+                            border-bottom: 1px solid #ccc;
+                        }
+                    }
+                }
+            }
+
+            ul {
+                display: flex;
+                justify-content: center;
+                gap: 0.625rem;
+                margin: 3.125rem 0;
+
+                li {
+                    width: 14px;
+                    height: 14px;
+                    border: 1px solid #aaa;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+
+                    &.active, &:hover {
+                        background-color: $main-color;
+                        border: 1px solid $main-color;
+                    }
+                }
+            }
+        }
+
+        .skills {
+            .progress {
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+
+                .progress__holder {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.9375rem;
+
+                    h4 {
+                        text-transform: uppercase;
+                        font-weight: normal;
+                    }
+
+                    .progress__bar {
+                        background-color: #dedadc;
+
+                        span {
+                            position: relative;
+                            display: block;
+                            background-color: $main-color;
+                            height: 1.875rem;
+
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                top: -8px;
+                                right: -8px;
+                                border-style: solid;
+                                border-width: 8px;
+                                border-color: black transparent transparent transparent;
+                            }
+
+                            &::before {
+                                content: attr(data-progress);
+                                position: absolute;
+                                background-color: black;
+                                color: white;
+                                width: 40px;
+                                top: -34px;
+                                right: -20px;
+                                padding: 4px 0;
+                                text-align: center;
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3.75rem;
+        gap: 1.875rem;
+
+        h3 {
+            font-weight: normal;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        P {
+            color: $text-color;
+            line-height: 2;
+            text-align: center;
+        }
+    }
+}

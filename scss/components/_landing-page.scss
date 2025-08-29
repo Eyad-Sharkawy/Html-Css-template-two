@@ -86,13 +86,12 @@
             height: 20px;
             border-radius: 50%;
             cursor: pointer;
+            border: 1px solid white;
+            transition: background-color 0.3s ease;
 
-            &:not(.active) {
-                border: 1px solid white;
-            }
-
-            &.active {
+            &.active, &:hover {
                 background-color: $main-color;
+                border: 1px solid $main-color;
             }
         }
     }

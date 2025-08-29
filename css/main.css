@@ -232,12 +232,12 @@ ul {
   height: 20px;
   border-radius: 50%;
   cursor: pointer;
-}
-.landing-page .bullets li:not(.active) {
   border: 1px solid white;
+  transition: background-color 0.3s ease;
 }
-.landing-page .bullets li.active {
+.landing-page .bullets li.active, .landing-page .bullets li:hover {
   background-color: #19c8fa;
+  border: 1px solid #19c8fa;
 }
 
 /*Landing Page End*/
@@ -661,6 +661,129 @@ ul {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.skills-testimonials {
+  padding: 6.25rem 0;
+}
+.skills-testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.75rem;
+}
+@media (max-width: 992px) {
+  .skills-testimonials .container {
+    grid-template-columns: 1fr;
+  }
+}
+.skills-testimonials .container .testimonials .profiles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+.skills-testimonials .container .testimonials .profiles-container .profiles {
+  display: flex;
+  align-items: center;
+  gap: 3.125rem;
+}
+.skills-testimonials .container .testimonials .profiles-container .profiles img {
+  border-radius: 50%;
+}
+.skills-testimonials .container .testimonials .profiles-container .profiles .profile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.skills-testimonials .container .testimonials .profiles-container .profiles .profile-text p:first-child {
+  line-height: 1.8;
+}
+.skills-testimonials .container .testimonials .profiles-container .profiles .profile-text p.name {
+  color: #777;
+  text-align: right;
+  font-size: 14px;
+}
+.skills-testimonials .container .testimonials .profiles-container .profiles .profile-text hr {
+  border-bottom: 1px solid #ccc;
+}
+.skills-testimonials .container .testimonials ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  margin: 3.125rem 0;
+}
+.skills-testimonials .container .testimonials ul li {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.skills-testimonials .container .testimonials ul li.active, .skills-testimonials .container .testimonials ul li:hover {
+  background-color: #19c8fa;
+  border: 1px solid #19c8fa;
+}
+.skills-testimonials .container .skills .progress {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.skills-testimonials .container .skills .progress .progress__holder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+.skills-testimonials .container .skills .progress .progress__holder h4 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.skills-testimonials .container .skills .progress .progress__holder .progress__bar {
+  background-color: #dedadc;
+}
+.skills-testimonials .container .skills .progress .progress__holder .progress__bar span {
+  position: relative;
+  display: block;
+  background-color: #19c8fa;
+  height: 1.875rem;
+}
+.skills-testimonials .container .skills .progress .progress__holder .progress__bar span::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  border-style: solid;
+  border-width: 8px;
+  border-color: black transparent transparent transparent;
+}
+.skills-testimonials .container .skills .progress .progress__holder .progress__bar span::before {
+  content: attr(data-progress);
+  position: absolute;
+  background-color: black;
+  color: white;
+  width: 40px;
+  top: -34px;
+  right: -20px;
+  padding: 4px 0;
+  text-align: center;
+  border-radius: 4px;
+}
+.skills-testimonials .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3.75rem;
+  gap: 1.875rem;
+}
+.skills-testimonials .heading h3 {
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+.skills-testimonials .heading P {
+  color: #777;
+  line-height: 2;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
