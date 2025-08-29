@@ -32,7 +32,8 @@ template-two/
 │   │   ├── _portfolio.scss
 │   │   ├── _video.scss
 │   │   ├── _about-us.scss
-│   │   └── stats.scss
+│   │   ├── _stats.scss
+|   |   └── _skills-testimonials.scss
 │   ├── helpers/        # Sass utilities
 │   │   ├── _variables.scss
 │   │   ├── _mixins.scss
@@ -58,6 +59,7 @@ template-two/
 - **Video**: Video section with overlay
 - **About Us**: Company information section
 - **Stats**: Statistics/numbers section
+- **skills/testimonials**: Testimonial/Skills
 
 ### Design Features
 - Responsive grid system
@@ -145,7 +147,7 @@ Each component has its own SCSS file in the `scss/components/` directory for eas
 
 ## 🤝 Contributing
 
-This is a personal project, but suggestions and feedback are welcome!
+This is a personal project, but suggestions and feedbacks are welcomed!
 
 ## 📄 License
 
