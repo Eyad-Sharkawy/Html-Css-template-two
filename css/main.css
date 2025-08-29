@@ -950,6 +950,7 @@ ul {
 }
 
 /*Pricing End*/
+/*Subscribe Start*/
 .subscribe {
   background-image: url("../media/images/subscribe.jpg");
   padding: 6.25rem 0;
@@ -1019,6 +1020,8 @@ ul {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+/*Subscribe End*/
+/*Contact us Start*/
 .contact-us {
   padding: 6.25rem 0;
 }
@@ -1113,5 +1116,7 @@ ul {
   cursor: pointer;
   margin-left: auto;
 }
+
+/*Contact us End*/
 
 /*# sourceMappingURL=main.css.map */
