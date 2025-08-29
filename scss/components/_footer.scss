@@ -1,0 +1,59 @@
+/*Footer Start*/
+@use '../helpers/variables.scss' as *;
+@use '../helpers/mixins.scss' as *;
+
+footer {
+    padding: $section-padding 0;
+    background-image: url("../media/images/subscribe.jpg");
+    background-size: cover;
+    position: relative;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        color: white;
+        gap: 2.5rem;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+
+            p {
+                text-transform: uppercase;
+                font-size: 1.375rem;
+                width: fit-content;
+            }
+
+            hr {
+                border-bottom: 1px solid white;
+            }
+
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+
+        p {
+            span {
+                color: $main-color;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &:before {
+        content: "";
+        @include overlay;
+    }
+}
+
+/*Footer End*/
