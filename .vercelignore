@@ -1,19 +1,15 @@
-# Exclude from final deployment but allow during build
-# SCSS source files - hidden from public access
-*.scss
-
-# Development files
+# Development files - exclude completely
 node_modules/
 package-lock.json
 .git/
 .idea/
 DEVELOPMENT.md
 
-# Source maps - not needed in production
-*.map
-
 # Environment files
 .env*
+
+# Source maps - not needed in production
+*.map
 
 # Build artifacts (unminified versions)
 css/main.css
@@ -23,3 +19,6 @@ css/normalize.css
 # Keep only the minified production CSS
 !css/main.min.css
 !css/normalize.min.css
+
+# Note: SCSS files are NOT excluded here because Vercel needs them during build
+# They will be automatically hidden from public access after build
