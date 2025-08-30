@@ -1,24 +1,5 @@
 {
   "version": 2,
   "outputDirectory": ".",
-  "buildCommand": "echo 'No build needed - using pre-compiled CSS'",
-  "ignoreCommand": "echo 'Ignoring SCSS files for production'",
-  "functions": {},
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
-  "ignore": [
-    "scss/**/*",
-    "*.scss",
-    "*.sass",
-    "node_modules/**/*",
-    ".git/**/*",
-    "README.md",
-    "DEVELOPMENT.md",
-    "package.json",
-    "package-lock.json"
-  ]
+  "buildCommand": "echo 'No build needed - using pre-compiled CSS'"
 }
