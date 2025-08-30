@@ -14,10 +14,8 @@
     "clean": "rm -rf css/*.css css/*.map",
     "serve": "npx live-server --port=3000 --open=/"
   },
-  "dependencies": {
-    "sass": "^1.69.0"
-  },
   "devDependencies": {
+    "sass": "^1.69.0",
     "live-server": "^1.2.2"
   },
   "private": true
