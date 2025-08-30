@@ -57,7 +57,7 @@ template-two/
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Eyad-Sharkawy/Html-Css-template-two
    cd template-two
    ```
 
