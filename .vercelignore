@@ -1,8 +1,8 @@
-# SCSS source files - never deploy these
-scss/
+# Exclude from final deployment but allow during build
+# SCSS source files - hidden from public access
 *.scss
 
-# Development and build files
+# Development files
 node_modules/
 package-lock.json
 .git/
@@ -15,7 +15,7 @@ DEVELOPMENT.md
 # Environment files
 .env*
 
-# Build artifacts
+# Build artifacts (unminified versions)
 css/main.css
 css/main.css.map
 css/normalize.css
