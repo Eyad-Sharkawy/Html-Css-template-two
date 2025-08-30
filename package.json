@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx sass scss/main.scss:css/main.min.css --style=compressed --source-map",
+    "vercel-build": "npm run build",
     "watch": "npx sass scss/main.scss:css/main.css --watch",
     "dev": "npx sass scss/main.scss:css/main.css --watch",
     "build:dev": "npx sass scss/main.scss:css/main.css",
