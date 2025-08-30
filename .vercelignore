@@ -1,0 +1,25 @@
+# SCSS source files - never deploy these
+scss/
+*.scss
+
+# Development and build files
+node_modules/
+package-lock.json
+.git/
+.idea/
+DEVELOPMENT.md
+
+# Source maps - not needed in production
+*.map
+
+# Environment files
+.env*
+
+# Build artifacts
+css/main.css
+css/main.css.map
+css/normalize.css
+
+# Keep only the minified production CSS
+!css/main.min.css
+!css/normalize.min.css
