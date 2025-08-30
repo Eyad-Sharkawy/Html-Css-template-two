@@ -1,13 +1,39 @@
-// scss/main.scss
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 
-// Helpers
+// =============================================================================
+// HELPERS - Global utilities and configurations
+// =============================================================================
+
+// Import global variables first (colors, fonts, spacing)
 @use 'helpers/variables.scss';
+
+// Import mixins and utility functions
 @use 'helpers/mixins.scss';
+
+// Import global styles and resets
 @use 'helpers/global.scss';
 
-// Components
+// =============================================================================
+// COMPONENTS - Individual UI component styles
+// =============================================================================
+
+// Layout components
 @use "components/header";
 @use "components/landing-page";
+
+// Content components
 @use "components/services";
 @use "components/design";
 @use "components/portfolio";
@@ -16,7 +42,23 @@
 @use "components/stats";
 @use "components/skills-testimonials";
 @use "components/quote";
+
+// Interactive components
 @use "components/pricing";
 @use "components/subscribe";
 @use "components/contact-us";
+
+// Footer component
 @use "components/footer";
+
+/**
+ * Import Order Notes:
+ * 
+ * 1. Variables must come first as they're used by mixins and other files
+ * 2. Mixins come second as they may be used by components
+ * 3. Global styles come third to establish base styles
+ * 4. Components are imported in logical order (layout → content → interactive → footer)
+ * 
+ * Each component file should be self-contained and only import what it needs
+ * from the helpers directory.
+ */

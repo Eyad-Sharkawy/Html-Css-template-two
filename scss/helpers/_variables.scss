@@ -1,16 +1,88 @@
-// scss/helpers/_variables.scss
+/**
+ * Global SCSS Variables
+ * 
+ * This file contains all global variables used throughout the project.
+ * Variables are organized by category for easy maintenance and updates.
+ * 
+ * Usage:
+ * - Colors: Use for consistent theming across components
+ * - Typography: Maintain consistent font usage
+ * - Spacing: Use rem units for scalable layouts
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 
-// Colors
-$main-color: #19c8fa;
-$transparent-color: rgba(15, 116, 143, 0.7);
-$text-color: #777;
-$dark-background: #1f2021;
-$light-background: #fcfcfc;
-$white: #fff;
-$black: #000;
+// =============================================================================
+// COLOR PALETTE
+// =============================================================================
 
-// Fonts
-$main-font: "Open Sans", sans-serif;
+/**
+ * Primary Brand Colors
+ * These colors define the main brand identity and should be used
+ * for primary actions, highlights, and brand elements.
+ */
+$main-color: #19c8fa;                    // Primary brand color (cyan/blue)
+$transparent-color: rgba(15, 116, 143, 0.7); // Semi-transparent brand color
 
-// Spacing
-$section-padding: 6.25rem;
+/**
+ * Text Colors
+ * Used for different text hierarchies and readability.
+ */
+$text-color: #777;                       // Main body text color
+$white: #fff;                            // White text and backgrounds
+$black: #000;                            // Black text and borders
+
+/**
+ * Background Colors
+ * Used for section backgrounds and content areas.
+ */
+$dark-background: #1f2021;               // Dark section backgrounds
+$light-background: #fcfcfc;              // Light section backgrounds
+
+// =============================================================================
+// TYPOGRAPHY
+// =============================================================================
+
+/**
+ * Font Family
+ * Primary font stack for the entire project.
+ * Fallbacks ensure consistent rendering across platforms.
+ */
+$main-font: "Open Sans", sans-serif;     // Primary font with fallback
+
+// =============================================================================
+// SPACING & LAYOUT
+// =============================================================================
+
+/**
+ * Section Spacing
+ * Consistent spacing unit for section padding and margins.
+ * Using rem units for scalable layouts that respect user font preferences.
+ */
+$section-padding: 6.25rem;               // 100px equivalent (6.25 * 16px)
+
+/**
+ * Spacing Scale Reference:
+ * 
+ * 0.625rem = 10px   (small margins, padding)
+ * 0.875rem = 14px   (small text, tight spacing)
+ * 1.25rem  = 20px   (standard spacing)
+ * 1.875rem = 30px   (medium spacing)
+ * 2.5rem   = 40px   (large spacing)
+ * 3.125rem = 50px   (section spacing)
+ * 4.375rem = 70px   (large margins)
+ * 6.25rem  = 100px  (section padding)
+ * 
+ * All spacing values should use these consistent units for maintainability.
+ */
+
+/**
+ * Breakpoint Variables (for future use)
+ * These can be added here for consistent media query breakpoints:
+ * 
+ * $mobile: 576px;
+ * $tablet: 768px;
+ * $desktop: 992px;
+ * $large-desktop: 1200px;
+ */

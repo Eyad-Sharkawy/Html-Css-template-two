@@ -17,6 +17,10 @@
         p:first-child {
             font-size: 1.875rem;
             margin-bottom: 1.25rem;
+
+            & + p {
+                margin-top: 1.25rem;
+            }
         }
     }
 

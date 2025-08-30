@@ -1,6 +1,37 @@
-// scss/helpers/_mixins.scss
+/**
+ * SCSS Mixins Library
+ * 
+ * This file contains reusable SCSS mixins that provide common functionality
+ * across components. Mixins help maintain consistency and reduce code duplication.
+ * 
+ * Usage:
+ * @include mixin-name(parameters);
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
+
+// Import variables for use in mixins
 @use "variables" as *;
 
+// =============================================================================
+// VENDOR PREFIXING
+// =============================================================================
+
+/**
+ * Prefixer Mixin
+ * 
+ * Automatically adds vendor prefixes to CSS properties for cross-browser compatibility.
+ * Useful for properties that may need prefixes in older browsers.
+ * 
+ * @param {string} $property - CSS property name
+ * @param {any} $value - CSS property value
+ * @param {list} $prefixes - List of vendor prefixes (webkit, moz, ms, o)
+ * 
+ * @example
+ * @include prefixer(transform, translateX(-50%), webkit moz);
+ * // Outputs: -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); transform: translateX(-50%);
+ */
 @mixin prefixer($property, $value, $prefixes: ()) {
   @each $prefix in $prefixes {
     -#{$prefix}-#{$property}: $value;
@@ -8,6 +39,22 @@
   #{$property}: $value;
 }
 
+// =============================================================================
+// LAYOUT & POSITIONING
+// =============================================================================
+
+/**
+ * Overlay Mixin
+ * 
+ * Creates a full-screen overlay with semi-transparent background.
+ * Commonly used for modal backgrounds, image overlays, and section backgrounds.
+ * 
+ * @example
+ * .modal-background {
+ *   @include overlay;
+ *   background-color: rgba(0, 0, 0, 0.8);
+ * }
+ */
 @mixin overlay {
   position: absolute;
   width: 100%;
@@ -17,6 +64,21 @@
   background-color: rgb(0 0 0 / 60%);
 }
 
+// =============================================================================
+// DECORATIVE ELEMENTS
+// =============================================================================
+
+/**
+ * Under-line Mixin
+ * 
+ * Creates decorative underline elements for section headings.
+ * Includes both a line and a circular accent element.
+ * 
+ * @example
+ * .section-title {
+ *   @include under-line;
+ * }
+ */
 @mixin under-line {
   &::after {
     content: "";
@@ -25,7 +87,7 @@
     height: 14px;
     border: 2px solid #333;
     border-radius: 50%;
-    background:$white;
+    background: $white;
     bottom: -37px;
     left: 50%;
     transform: translateX(-50%);
@@ -43,6 +105,28 @@
   }
 }
 
+// =============================================================================
+// TYPOGRAPHY & LAYOUT
+// =============================================================================
+
+/**
+ * Title Mixin
+ * 
+ * Provides consistent styling for section titles with decorative elements.
+ * Includes responsive text sizing and proper spacing.
+ * 
+ * Features:
+ * - Centered text alignment
+ * - Consistent bottom margin
+ * - Decorative underline elements
+ * - Responsive paragraph width
+ * - Automatic spacing for following elements
+ * 
+ * @example
+ * .services-heading {
+ *   @include title;
+ * }
+ */
 @mixin title {
   text-align: center;
   margin-bottom: 6.25rem;
@@ -59,8 +143,36 @@
   p {
     width: clamp(550px, 550px, 100%);
     max-width: 100%;
-    margin: 0 auto;
+    margin: 4.375rem auto 0;
     color: $text-color;
     line-height: 2;
   }
+
+  & + * {
+    margin-top: 6.25rem;
+  }
 }
+
+// =============================================================================
+// RESPONSIVE DESIGN HELPERS
+// =============================================================================
+
+/**
+ * Future Mixin Ideas:
+ * 
+ * @mixin responsive-font($min-size, $max-size, $min-width, $max-width) {
+ *   font-size: clamp($min-size, 4vw, $max-size);
+ * }
+ * 
+ * @mixin container($max-width: 1200px) {
+ *   max-width: $max-width;
+ *   margin: 0 auto;
+ *   padding: 0 1rem;
+ * }
+ * 
+ * @mixin grid($columns: 1, $gap: 1rem) {
+ *   display: grid;
+ *   grid-template-columns: repeat($columns, 1fr);
+ *   gap: $gap;
+ * }
+ */

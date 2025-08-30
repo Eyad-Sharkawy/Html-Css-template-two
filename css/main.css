@@ -1,4 +1,212 @@
-/*Global Rules Start*/
+@charset "UTF-8";
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
+/**
+ * Global SCSS Variables
+ * 
+ * This file contains all global variables used throughout the project.
+ * Variables are organized by category for easy maintenance and updates.
+ * 
+ * Usage:
+ * - Colors: Use for consistent theming across components
+ * - Typography: Maintain consistent font usage
+ * - Spacing: Use rem units for scalable layouts
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
+/**
+ * Primary Brand Colors
+ * These colors define the main brand identity and should be used
+ * for primary actions, highlights, and brand elements.
+ */
+/**
+ * Text Colors
+ * Used for different text hierarchies and readability.
+ */
+/**
+ * Background Colors
+ * Used for section backgrounds and content areas.
+ */
+/**
+ * Font Family
+ * Primary font stack for the entire project.
+ * Fallbacks ensure consistent rendering across platforms.
+ */
+/**
+ * Section Spacing
+ * Consistent spacing unit for section padding and margins.
+ * Using rem units for scalable layouts that respect user font preferences.
+ */
+/**
+ * Spacing Scale Reference:
+ * 
+ * 0.625rem = 10px   (small margins, padding)
+ * 0.875rem = 14px   (small text, tight spacing)
+ * 1.25rem  = 20px   (standard spacing)
+ * 1.875rem = 30px   (medium spacing)
+ * 2.5rem   = 40px   (large spacing)
+ * 3.125rem = 50px   (section spacing)
+ * 4.375rem = 70px   (large margins)
+ * 6.25rem  = 100px  (section padding)
+ * 
+ * All spacing values should use these consistent units for maintainability.
+ */
+/**
+ * Breakpoint Variables (for future use)
+ * These can be added here for consistent media query breakpoints:
+ * 
+ * $mobile: 576px;
+ * $tablet: 768px;
+ * $desktop: 992px;
+ * $large-desktop: 1200px;
+ */
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
+/**
+ * SCSS Mixins Library
+ * 
+ * This file contains reusable SCSS mixins that provide common functionality
+ * across components. Mixins help maintain consistency and reduce code duplication.
+ * 
+ * Usage:
+ * @include mixin-name(parameters);
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
+/**
+ * Prefixer Mixin
+ * 
+ * Automatically adds vendor prefixes to CSS properties for cross-browser compatibility.
+ * Useful for properties that may need prefixes in older browsers.
+ * 
+ * @param {string} $property - CSS property name
+ * @param {any} $value - CSS property value
+ * @param {list} $prefixes - List of vendor prefixes (webkit, moz, ms, o)
+ * 
+ * @example
+ * @include prefixer(transform, translateX(-50%), webkit moz);
+ * // Outputs: -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); transform: translateX(-50%);
+ */
+/**
+ * Overlay Mixin
+ * 
+ * Creates a full-screen overlay with semi-transparent background.
+ * Commonly used for modal backgrounds, image overlays, and section backgrounds.
+ * 
+ * @example
+ * .modal-background {
+ *   @include overlay;
+ *   background-color: rgba(0, 0, 0, 0.8);
+ * }
+ */
+/**
+ * Under-line Mixin
+ * 
+ * Creates decorative underline elements for section headings.
+ * Includes both a line and a circular accent element.
+ * 
+ * @example
+ * .section-title {
+ *   @include under-line;
+ * }
+ */
+/**
+ * Title Mixin
+ * 
+ * Provides consistent styling for section titles with decorative elements.
+ * Includes responsive text sizing and proper spacing.
+ * 
+ * Features:
+ * - Centered text alignment
+ * - Consistent bottom margin
+ * - Decorative underline elements
+ * - Responsive paragraph width
+ * - Automatic spacing for following elements
+ * 
+ * @example
+ * .services-heading {
+ *   @include title;
+ * }
+ */
+/**
+ * Future Mixin Ideas:
+ * 
+ * @mixin responsive-font($min-size, $max-size, $min-width, $max-width) {
+ *   font-size: clamp($min-size, 4vw, $max-size);
+ * }
+ * 
+ * @mixin container($max-width: 1200px) {
+ *   max-width: $max-width;
+ *   margin: 0 auto;
+ *   padding: 0 1rem;
+ * }
+ * 
+ * @mixin grid($columns: 1, $gap: 1rem) {
+ *   display: grid;
+ *   grid-template-columns: repeat($columns, 1fr);
+ *   gap: $gap;
+ * }
+ */
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
+/**
+ * Global Styles and CSS Reset
+ * 
+ * This file contains global styles that apply to the entire project.
+ * It includes CSS reset, base typography, and the responsive container system.
+ * 
+ * Key Features:
+ * - CSS reset for consistent cross-browser rendering
+ * - Global typography settings
+ * - Responsive container system
+ * - Utility classes and global rules
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
+/**
+ * CSS Reset
+ * 
+ * Removes default browser styling and ensures consistent rendering
+ * across different browsers and devices.
+ * 
+ * Note: Using box-sizing: border-box for more predictable layouts.
+ */
 *,
 *::before,
 *::after {
@@ -7,6 +215,14 @@
   margin: 0;
 }
 
+/**
+ * Base HTML and Body Styles
+ * 
+ * Sets up the foundation for the entire document:
+ * - Box-sizing model for predictable layouts
+ * - Smooth scrolling for better UX
+ * - Global font family inheritance
+ */
 html,
 body {
   box-sizing: border-box;
@@ -14,17 +230,65 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+/**
+ * List Reset
+ * 
+ * Removes default list styling (bullets, margins, padding)
+ * for consistent list appearance across components.
+ */
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+/**
+ * Container Class
+ * 
+ * Provides a responsive, centered container system with consistent padding
+ * and maximum widths for different screen sizes.
+ * 
+ * Features:
+ * - Responsive max-widths using CSS media queries
+ * - Consistent horizontal padding (15px on each side)
+ * - Centered layout with auto margins
+ * - Mobile-first responsive design
+ * 
+ * Breakpoint System:
+ * - Mobile: 0px - 575px (no max-width, full width)
+ * - Small: 576px+ (max-width: 540px)
+ * - Medium: 768px+ (max-width: 720px)
+ * - Large: 992px+ (max-width: 960px)
+ * - Extra Large: 1200px+ (max-width: 1140px)
+ * 
+ * Usage:
+ * <div class="container">
+ *   <!-- Your content here -->
+ * </div>
+ */
 .container {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  /**
+   * Small devices (landscape phones, 576px and up)
+   * Provides better readability on small screens while maintaining
+   * comfortable reading width.
+   */
+  /**
+   * Medium devices (tablets, 768px and up)
+   * Optimized for tablet viewing with increased content width.
+   */
+  /**
+   * Large devices (desktops, 992px and up)
+   * Standard desktop layout with comfortable reading width.
+   */
+  /**
+   * Extra large devices (large desktops, 1200px and up)
+   * Maximum width for very large screens, prevents content
+   * from becoming too wide and hard to read.
+   */
 }
 @media (min-width: 576px) {
   .container {
@@ -47,7 +311,62 @@ ul {
   }
 }
 
-/*Global Rules End*/
+/**
+ * Future Utility Classes
+ * 
+ * These can be added here for common utility patterns:
+ * 
+ * .text-center { text-align: center; }
+ * .text-left { text-align: left; }
+ * .text-right { text-align: right; }
+ * 
+ * .d-none { display: none; }
+ * .d-block { display: block; }
+ * .d-flex { display: flex; }
+ * .d-grid { display: grid; }
+ * 
+ * .w-100 { width: 100%; }
+ * .h-100 { height: 100%; }
+ * 
+ * .position-relative { position: relative; }
+ * .position-absolute { position: absolute; }
+ * .position-fixed { position: fixed; }
+ */
+/**
+ * Accessibility Improvements
+ * 
+ * Consider adding these global accessibility enhancements:
+ * 
+ * .sr-only {
+ *   position: absolute;
+ *   width: 1px;
+ *   height: 1px;
+ *   padding: 0;
+ *   margin: -1px;
+ *   overflow: hidden;
+ *   clip: rect(0, 0, 0, 0);
+ *   white-space: nowrap;
+ *   border: 0;
+ * }
+ * 
+ * .focus-visible:focus {
+ *   outline: 2px solid $main-color;
+ *   outline-offset: 2px;
+ * }
+ */
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Header Start*/
 .site-header {
   position: absolute;
@@ -149,6 +468,19 @@ ul {
 }
 
 /*Header End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Landing Page Start*/
 .landing-page {
   position: relative;
@@ -195,6 +527,7 @@ ul {
 .landing-page .text .content p {
   font-size: 0.875rem;
   line-height: 2;
+  margin-top: 1.25rem;
 }
 .landing-page .nav-arrow {
   position: absolute;
@@ -241,6 +574,19 @@ ul {
 }
 
 /*Landing Page End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Services Start*/
 .services {
   padding: 6.25rem 0;
@@ -281,9 +627,12 @@ ul {
 .services .services__heading p {
   width: clamp(550px, 550px, 100%);
   max-width: 100%;
-  margin: 0 auto;
+  margin: 4.375rem auto 0;
   color: #777;
   line-height: 2;
+}
+.services .services__heading + * {
+  margin-top: 6.25rem;
 }
 .services .services__container {
   display: flex;
@@ -319,6 +668,19 @@ ul {
 }
 
 /*Services End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Design Start*/
 .design {
   height: 600px;
@@ -379,22 +741,38 @@ ul {
 }
 
 /*Design End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Portfolio Start*/
 .portfolio {
   padding: 6.25rem 0;
 }
-.portfolio .portfolio__heading {
+.portfolio .container {
+  margin-bottom: 3.75rem;
+}
+.portfolio .container .portfolio__heading {
   text-align: center;
   margin-bottom: 6.25rem;
 }
-.portfolio .portfolio__heading h2 {
+.portfolio .container .portfolio__heading h2 {
   font-weight: normal;
   font-size: 2.5rem;
   position: relative;
   margin-bottom: 4.375rem;
   text-transform: uppercase;
 }
-.portfolio .portfolio__heading h2::after {
+.portfolio .container .portfolio__heading h2::after {
   content: "";
   position: absolute;
   width: 14px;
@@ -406,7 +784,7 @@ ul {
   left: 50%;
   transform: translateX(-50%);
 }
-.portfolio .portfolio__heading h2::before {
+.portfolio .container .portfolio__heading h2::before {
   content: "";
   position: absolute;
   width: 120px;
@@ -416,25 +794,28 @@ ul {
   left: 50%;
   transform: translateX(-50%);
 }
-.portfolio .portfolio__heading p {
+.portfolio .container .portfolio__heading p {
   width: clamp(550px, 550px, 100%);
   max-width: 100%;
-  margin: 0 auto;
+  margin: 4.375rem auto 0;
   color: #777;
   line-height: 2;
 }
-.portfolio .shuffle-container {
+.portfolio .container .portfolio__heading + * {
+  margin-top: 6.25rem;
+}
+.portfolio .container .shuffle-container {
   display: flex;
   justify-content: center;
 }
-.portfolio .shuffle-container li button {
+.portfolio .container .shuffle-container li button {
   padding: 0.625rem;
   background: #fff;
   border: none;
   transition: background-color ease 0.5s;
   cursor: pointer;
 }
-.portfolio .shuffle-container li button.active, .portfolio .shuffle-container li button:hover {
+.portfolio .container .shuffle-container li button.active, .portfolio .container .shuffle-container li button:hover {
   background: #19c8fa;
 }
 .portfolio .image-grid {
@@ -496,6 +877,19 @@ ul {
 }
 
 /*Portfolio End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Video Start*/
 .video {
   position: relative;
@@ -513,7 +907,7 @@ ul {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(15, 116, 143, 0.7);
-  padding: 3.125rem;
+  padding: 3.125rem 0;
   color: #fff;
   gap: 1.875rem;
   text-align: center;
@@ -544,6 +938,19 @@ ul {
 }
 
 /*Video End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*About us Start*/
 .about-us {
   padding-top: 6.25rem;
@@ -585,9 +992,12 @@ ul {
 .about-us .about-us__heading p {
   width: clamp(550px, 550px, 100%);
   max-width: 100%;
-  margin: 0 auto;
+  margin: 4.375rem auto 0;
   color: #777;
   line-height: 2;
+}
+.about-us .about-us__heading + * {
+  margin-top: 6.25rem;
 }
 .about-us img {
   position: relative;
@@ -605,6 +1015,19 @@ ul {
 }
 
 /*About us End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Stats Start*/
 .stats {
   padding: 6.25rem 0;
@@ -665,6 +1088,19 @@ ul {
 }
 
 /*Stats End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Testimonials and Skills Start*/
 .skills-testimonials {
   padding: 6.25rem 0;
@@ -683,6 +1119,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
+  margin-top: 3.75rem;
 }
 .skills-testimonials .container .testimonials .profiles-container .profiles {
   display: flex;
@@ -730,6 +1167,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  margin-top: 3.75rem;
 }
 .skills-testimonials .container .skills .progress .progress__holder {
   display: flex;
@@ -790,6 +1228,19 @@ ul {
 }
 
 /*Testimonials and Skills End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Quote Start*/
 .quote {
   padding: 6.25rem 0;
@@ -807,6 +1258,9 @@ ul {
   font-size: 1.875rem;
   margin-bottom: 1.25rem;
 }
+.quote .text p:first-child + p {
+  margin-top: 1.25rem;
+}
 .quote::before {
   content: "";
   position: absolute;
@@ -818,6 +1272,19 @@ ul {
 }
 
 /*Quote End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Pricing Start*/
 .pricing {
   padding: 6.25rem 0;
@@ -858,15 +1325,19 @@ ul {
 .pricing .heading p {
   width: clamp(550px, 550px, 100%);
   max-width: 100%;
-  margin: 0 auto;
+  margin: 4.375rem auto 0;
   color: #777;
   line-height: 2;
+}
+.pricing .heading + * {
+  margin-top: 6.25rem;
 }
 .pricing .pricing__plans {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
   gap: 1.875rem;
+  margin-bottom: 3.125rem;
 }
 @media (max-width: 1024px) {
   .pricing .pricing__plans {
@@ -884,7 +1355,7 @@ ul {
 .pricing .pricing__plans .pricing__plan .price {
   border-top: 1px solid #19c8fa;
   border-bottom: 1px solid #19c8fa;
-  padding: 2.5rem 1.25rem;
+  padding: 2.5rem 0;
 }
 .pricing .pricing__plans .pricing__plan .price h3 {
   font-weight: normal;
@@ -950,6 +1421,19 @@ ul {
 }
 
 /*Pricing End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Subscribe Start*/
 .subscribe {
   background-image: url("../media/images/subscribe.jpg");
@@ -963,6 +1447,7 @@ ul {
   align-items: center;
   gap: 3.125rem;
   text-align: center;
+  position: relative;
 }
 @media (min-width: 1024px) {
   .subscribe .container {
@@ -972,7 +1457,6 @@ ul {
 }
 .subscribe .container form {
   display: flex;
-  position: relative;
   width: 500px;
   max-width: 100%;
 }
@@ -1006,11 +1490,9 @@ ul {
   cursor: pointer;
 }
 .subscribe .container p {
-  position: relative;
-  line-height: 2;
   color: white;
 }
-.subscribe .container::before {
+.subscribe::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -1021,6 +1503,19 @@ ul {
 }
 
 /*Subscribe End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Contact us Start*/
 .contact-us {
   padding: 6.25rem 0;
@@ -1061,9 +1556,12 @@ ul {
 .contact-us .heading p {
   width: clamp(550px, 550px, 100%);
   max-width: 100%;
-  margin: 0 auto;
+  margin: 4.375rem auto 0;
   color: #777;
   line-height: 2;
+}
+.contact-us .heading + * {
+  margin-top: 6.25rem;
 }
 .contact-us .contact-form {
   display: flex;
@@ -1111,13 +1609,25 @@ ul {
   color: white;
   padding: 1.25rem;
   border: none;
-  justify-self: right;
   text-transform: uppercase;
   cursor: pointer;
-  margin-left: auto;
+  align-self: flex-end;
 }
 
 /*Contact us End*/
+/**
+ * Main SCSS Entry Point
+ * 
+ * This file serves as the central import hub for all SCSS components.
+ * It follows a logical import order: helpers first, then components.
+ * 
+ * Architecture:
+ * - Helpers: Global variables, mixins, and utilities
+ * - Components: Individual UI component styles
+ * 
+ * @author Eyad Sharkawy
+ * @version 1.0.0
+ */
 /*Footer Start*/
 footer {
   padding: 6.25rem 0;
@@ -1169,5 +1679,16 @@ footer:before {
 }
 
 /*Footer End*/
+/**
+ * Import Order Notes:
+ * 
+ * 1. Variables must come first as they're used by mixins and other files
+ * 2. Mixins come second as they may be used by components
+ * 3. Global styles come third to establish base styles
+ * 4. Components are imported in logical order (layout → content → interactive → footer)
+ * 
+ * Each component file should be self-contained and only import what it needs
+ * from the helpers directory.
+ */
 
 /*# sourceMappingURL=main.css.map */

@@ -5,24 +5,28 @@
 .portfolio {
     padding: $section-padding 0;
 
-    .portfolio__heading {
-        @include title;
-    }
+    .container {
+        margin-bottom: 3.75rem;
 
-    .shuffle-container {
-        display: flex;
-        justify-content: center;
+        .portfolio__heading {
+            @include title;
+        }
 
-        li {
-            button {
-                padding: 0.625rem;
-                background: $white;
-                border: none;
-                transition: background-color ease 0.5s;
-                cursor: pointer;
+        .shuffle-container {
+            display: flex;
+            justify-content: center;
 
-                &.active, &:hover {
-                    background: $main-color;
+            li {
+                button {
+                    padding: 0.625rem;
+                    background: $white;
+                    border: none;
+                    transition: background-color ease 0.5s;
+                    cursor: pointer;
+
+                    &.active, &:hover {
+                        background: $main-color;
+                    }
                 }
             }
         }
